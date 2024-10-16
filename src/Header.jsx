@@ -20,11 +20,7 @@ export default function ButtonUsage() {
         alignItems:"center", 
         margin:"auto",
         padding:"15px",
-      }}
-
-
-        
-        
+      }}   
     >
       <ToggleButtonGroup
         value={alignment}
@@ -36,44 +32,44 @@ export default function ButtonUsage() {
           container
           direction={{xs:"column", sm:"row"}}
         >
-        <ToggleButton 
-          sx={{
-            fontWeight: "600",
-            border: "solid 3px darkcyan",
-            background: "darkgray"
-          }} 
-          value="posts"
-        >
-          Posts
-        </ToggleButton>
-        <ToggleButton 
-          value="quotes"
-          sx={{
-            fontWeight: "600",
-            border: "solid 3px darkcyan",
-            background: "darkgray"
-          }} 
-        >
-          Quotes
+          <ToggleButton 
+            sx={{
+              fontWeight: "600",
+              border: "solid 3px darkcyan",
+              background: "darkgray"
+            }} 
+            value="posts"
+          >
+            Posts
           </ToggleButton>
-        <ToggleButton 
-          value="users"
-          sx={{
-            fontWeight: "600",
-            border: "solid 3px darkcyan",
-            background: "darkgray"
-          }} 
-        >
-          Users
-        </ToggleButton>
+          <ToggleButton 
+            value="quotes"
+            sx={{
+              fontWeight: "600",
+              border: "solid 3px darkcyan",
+              background: "darkgray"
+            }} 
+          >
+            Quotes
+          </ToggleButton>
+          <ToggleButton 
+            value="users"
+            sx={{
+              fontWeight: "600",
+              border: "solid 3px darkcyan",
+              background: "darkgray"
+            }} 
+          >
+            Users
+          </ToggleButton>
         </Grid2>
       </ToggleButtonGroup>
 
-      <div style={{ marginTop: '20px' }}>
+      <Box sx={{ mt: '20px' }}>
         {alignment === 'posts' && <Posts />}
         {alignment === 'quotes' && <Quotes />}
         {alignment === 'users' && <Users />}
-      </div>
+      </Box>
     </Grid2>
   );
 }
